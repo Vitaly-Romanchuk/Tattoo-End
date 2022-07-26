@@ -1,0 +1,506 @@
+/*-----------------------------------------------------
+1. General
+------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: Mulish, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn,
+.btn-inverse {
+  align-items: center;
+  display: flex;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 60px;
+  letter-spacing: 2.5px;
+  justify-content: center;
+  text-transform: uppercase;
+  width: 250px;
+}
+
+.container {
+  max-width: 1410px;
+  margin: auto;
+}
+
+.container-large {
+  max-width: 1720px;
+  margin: auto;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.img-cover {
+  background: lightslategray;
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*-----------------------------------------------------
+2. Navigation
+------------------------------------------------------*/
+
+.header {
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+}
+
+.logo {
+  height: 26px;
+  margin-top: 36px;
+}
+
+.navigation {
+  float: right;
+}
+.navigation li {
+  float: left;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  list-style: none;
+  margin-left: 50px;
+  text-transform: uppercase;
+}
+
+.open-nav {
+  display: none;
+  float: right;
+  height: 22px;
+  margin: 38px 0;
+  position: relative;
+  width: 28px;
+}
+
+.open-nav:hover {
+  cursor: pointer;
+}
+
+.open-nav i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 2px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.open-nav i:before {
+  position: absolute;
+  top: -9px;
+  content: " ";
+  height: 2px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.open-nav i:after {
+  position: absolute;
+  top: 9px;
+  content: " ";
+  height: 2px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.open-nav:hover i:before,
+.open-nav:hover i:after {
+  width: 80%;
+}
+
+.responsive-nav-container {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  transition: opacity 0.4s, left 0s 0.4s;
+  z-index: 2;
+}
+
+.responsive-nav-container.active {
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.4s, left 0s;
+}
+
+.close-nav {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 70px;
+  top: 35px;
+}
+
+.responsive-nav {
+  left: 70px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.responsive-nav li {
+  font-family: "Mulish", serif;
+  font-size: 2.7rem;
+  letter-spacing: 1px;
+  list-style: none;
+  margin-bottom: 8px;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.social-links {
+  bottom: 35px;
+  left: 70px;
+  position: absolute;
+}
+
+.social-links li {
+  float: left;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  list-style: none;
+  margin-right: 50px;
+  text-transform: uppercase;
+}
+
+/*-----------------------------------------------------
+3. Footer
+------------------------------------------------------*/
+
+footer {
+  padding-top: 100px;
+}
+
+.footer-details {
+  float: left;
+  width: 25%;
+}
+
+.footer-details li {
+  letter-spacing: 0.2px;
+  list-style: none;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.footer-details li:first-child {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.625rem;
+  margin-bottom: 9px;
+}
+
+.footer-details .footer-email {
+  text-transform: lowercase;
+}
+
+.footer-details:nth-of-type(4) li:first-child {
+  margin-bottom: 20px;
+}
+
+.footer-details form input {
+  border: none;
+  float: left;
+  font-family: Montserrat, sans-serif;
+  height: 50px;
+  outline: none;
+  padding-left: 25px;
+  width: 80%;
+}
+
+.footer-details form input::placeholder {
+  font-family: Montserrat, sans-serif;
+}
+
+.footer-details form button {
+  border: none;
+  cursor: pointer;
+  float: left;
+  height: 50px;
+  transition: all 0.2s ease-in-out;
+  width: 20%;
+}
+
+.footer-details form button img {
+  width: 27%;
+}
+
+.copyright {
+  font-size: 1.125rem;
+  padding: 130px 0 43px 0;
+  text-transform: capitalize;
+}
+
+/*-----------------------------------------------------
+4. About us
+------------------------------------------------------*/
+
+.about-us {
+  margin: 150px 0;
+}
+
+.about-us .block-1 {
+  float: left;
+  width: 57%;
+}
+
+.about-us .block-2 {
+  float: left;
+  width: 43%;
+}
+
+.about-us .block-1 {
+  margin-top: 100px;
+}
+
+.about-us .block-2 .about-image {
+  height: 670px;
+}
+
+.about-us .content h3 {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.about-us .content h2 {
+  font-family: "Mulish", serif;
+  font-size: 3.8rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 28px 0 30px 0;
+  text-transform: capitalize;
+}
+
+.about-us .content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 42px;
+  width: 73%;
+}
+
+/* =============== = Contact Us =============== */
+
+.contact-us .block-1 {
+  align-items: center;
+  display: flex;
+  float: left;
+  height: 680px;
+  justify-content: center;
+  width: 50%;
+}
+
+.contact-us .block-1 .content {
+  width: 60%;
+}
+
+.contact-us .block-1 .content h2 {
+  font-family: "Mulish", serif;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.contact-us .block-1 .content p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  margin: 32px 0 48px 0;
+}
+
+.contact-us .block-2 {
+  background: url("..//img/image-contact-us.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  float: right;
+  height: 680px;
+  width: 50%;
+}
+
+/* =============== = Featured Works =============== */
+
+.featured-works {
+  margin: 150px 0;
+}
+
+.featured-works-item {
+  height: 470px;
+  margin-bottom: 60px;
+  position: relative;
+  width: 100%;
+}
+
+.featured-works-item .overlay {
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  transition: all 0.3s linear;
+}
+
+.featured-works-item .overlay:hover {
+  opacity: 1;
+}
+
+.featured-works-item .overlay .content {
+  bottom: 30px;
+  left: 30px;
+  position: absolute;
+}
+
+.featured-works-item .overlay .content h2 {
+  font-family: "Mulish", serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin-top: 8px;
+  text-transform: capitalize;
+}
+
+.featured-works-item .overlay .content span {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.featured-works-item .overlay .content span:nth-of-type(2) {
+  margin-left: 100px;
+}
+
+.featured-works-item .overlay .content span:nth-of-type(2):after {
+  content: "";
+  height: 1px;
+  left: -70px;
+  position: absolute;
+  top: 7px;
+  width: 40px;
+}
+
+/* =============== = Hero =============== */
+
+.main-hero {
+  height: 820px;
+}
+
+.main-hero header {
+  position: absolute;
+}
+
+.main-hero .block-1 {
+  align-items: center;
+  display: flex;
+  float: left;
+  height: 820px;
+  width: 55%;
+}
+
+.main-hero .block-1 h1 {
+  font-family: "Mulish", serif;
+  font-size: 4rem;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.main-hero .block-1 p {
+  font-size: 1.25rem;
+  letter-spacing: 0.2px;
+  line-height: 1.8;
+  margin: 35px 0 48px 0;
+  width: 76%;
+}
+
+.main-hero-image {
+  background: url("..//img/image-placeholder.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  float: right;
+  height: 100%;
+  width: 45%;
+}
+
+/* =============== = Services =============== */
+
+.services .item {
+  align-items: center;
+  border-right: 1px solid #333;
+  display: flex;
+  float: left;
+  height: 450px;
+  width: 25%;
+}
+
+.services .item:nth-of-type(4) {
+  border-right: none;
+}
+
+.services .item .content {
+  text-align: center;
+  width: 100%;
+}
+
+.services .item .icon {
+  border: 2px solid #666;
+  border-radius: 50%;
+  display: flex;
+  height: 135px;
+  justify-content: center;
+  margin: auto;
+  width: 135px;
+}
+
+.services .item .content h2 {
+  font-size: 0.75rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  margin-top: 35px;
+  text-transform: uppercase;
+}

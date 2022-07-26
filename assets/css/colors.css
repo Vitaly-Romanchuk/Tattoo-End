@@ -1,0 +1,83 @@
+/*-----------------------------------------------------
+# color #222
+------------------------------------------------------*/
+
+.navigation a,
+.footer-details li:first-child,
+.featured-works-item .overlay .content,
+.btn-inverse {
+  color: #222;
+}
+
+/*-----------------------------------------------------
+# background #222
+------------------------------------------------------*/
+
+.open-nav i,
+.open-nav i:before,
+.open-nav i:after,
+.featured-works-item .overlay .content span:nth-of-type(2):after,
+.responsive-nav-container,
+.footer-details form button:hover,
+.btn:hover,
+.main-hero,
+.contact-us .block-1,
+.btn,
+.footer-details form button,
+.services .item {
+  background: #222;
+}
+
+/*-----------------------------------------------------
+# color #444
+------------------------------------------------------*/
+
+.about-us .content h3 {
+  color: #444;
+}
+
+/*-----------------------------------------------------
+# color #555
+------------------------------------------------------*/
+
+.copyright,
+.footer-details li,
+.footer-details li a {
+  color: #555;
+}
+
+/*-----------------------------------------------------
+# color #fff
+------------------------------------------------------*/
+
+.responsive-nav-container a,
+.footer-details .ti-email,
+.services .item .content h2,
+.btn,
+.main-hero .block-1,
+.contact-us .block-1 .content {
+  color: #fff;
+}
+
+/*-----------------------------------------------------
+# background #fff
+------------------------------------------------------*/
+
+footer,
+.main-hero .btn:hover,
+.contact-us .btn:hover,
+.btn-inverse {
+  background: #fff;
+}
+.featured-works-item .overlay {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/*-----------------------------------------------------
+# background #f8f8f8
+------------------------------------------------------*/
+
+form input,
+form textarea {
+  background: #f8f8f8;
+}
